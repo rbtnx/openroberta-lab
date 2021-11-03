@@ -1653,6 +1653,7 @@ Blockly.Msg.TOOLBOX_COLOUR = "Kolory";
 Blockly.Msg.TOOLBOX_COMMUNICATION = "Wiadomości";
 Blockly.Msg.TOOLBOX_CONTROL = "Kontrola";
 Blockly.Msg.TOOLBOX_DECISION = "Decyzje";
+Blockly.Msg.TOOLBOX_DIALOG = "Dialog";  // untranslated
 Blockly.Msg.TOOLBOX_DISPLAY = "Ekran";
 Blockly.Msg.TOOLBOX_DRIVE = "Napęd";
 Blockly.Msg.TOOLBOX_IMAGE = "Obrazy";
