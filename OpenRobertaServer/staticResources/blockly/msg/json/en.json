@@ -1,7 +1,7 @@
 {
 	"@metadata": {
 		"author": "Ellen Spertus <ellen.spertus@gmail.com>",
-		"lastupdated": "2022-01-06 10:56:55.141662",
+		"lastupdated": "2022-01-08 20:44:07.122352",
 		"locale": "en",
 		"messagedocumentation" : "qqq"
 	},
@@ -661,6 +661,7 @@
 	"TOOLBOX_ANIMATION": "Animation",
 	"TOOLBOX_VISION": "Vision",
 	"TOOLBOX_CLEANING": "Cleaning",
+	"TOOLBOX_DIALOG": "Dialog",
 	"MENU_EDIT": "edit",
 	"MENU_ROBOT": "robot",
 	"MENU_HELP": "help",
