@@ -56,6 +56,7 @@ public final class Project {
     private RobotCommunicator robotCommunicator;
     private IRobotFactory robotFactory;
     private boolean withWrapping = true;
+    private boolean userWrittenCode = true;
     private ProgramAst<Void> program = null;
     private ConfigurationAst configuration = null;
     private StringBuilder sourceCodeBuilder = new StringBuilder();
@@ -166,6 +167,10 @@ public final class Project {
         return this.withWrapping;
     }
 
+    public boolean isUserWrittenCode() {
+        return this.userWrittenCode;
+    }
+
     /**
      * @return the programTransformer
      */
@@ -251,6 +256,10 @@ public final class Project {
     public boolean hasSucceeded() {
         Assert.notNull(this.result);
         return this.result.isSuccess();
+    }
+
+    public void setUserWrittenCode(boolean userWrittenCode) {
+        this.userWrittenCode = userWrittenCode;
     }
 
     public Map<String, String> getResultParams() {
@@ -414,6 +423,7 @@ public final class Project {
             } else if ( this.programNativeSource != null ) { // Used to run native code directly
                 Assert.isNull(this.programXml, "Program XML should not be set when using native compile");
                 this.project.setSourceCode(this.programNativeSource);
+                this.project.setUserWrittenCode(this.project.userWrittenCode);
             } else { // STANDARD CASE - Used to follow the default generation, compilation, run from blockly
                 if ( this.project.configuration == null ) {
                     transformConfiguration();
