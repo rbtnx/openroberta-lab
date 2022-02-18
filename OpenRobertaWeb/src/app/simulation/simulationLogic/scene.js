@@ -372,6 +372,17 @@ Scene.prototype.drawRobots = function () {
             }
             drawVariables();
         }
+
+        $(".header").on("click", function() {
+            $header = $(this);
+            $simData = $header.next();
+            $simData.slideToggle(300, function() {
+                $header.text(function() {
+                    return $simData.is(":visible") ? "[-] Simulator Data" : "[+] Simulator Data";
+                });
+            });
+        });
+
         this.rCtx.scale(SIM.getScale(), SIM.getScale());
         this.rCtx.save();
         this.rCtx.translate(this.robots[r].pose.x, this.robots[r].pose.y);

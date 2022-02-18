@@ -1185,6 +1185,17 @@ button#simCustomObstacle.typcn:before {
     margin-right: 6px;
 }
 
+#simValuesContent .header {
+    background-color:#d3d3d3;
+    padding: 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#simValuesContent .simData {
+    display: none;
+}
+
 #simValuesContent div > div {
     white-space: nowrap;
     overflow: hidden;
